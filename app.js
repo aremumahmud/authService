@@ -3,7 +3,7 @@ var mongoose =require("mongoose")
 var router = require("./router")
 
 var app = express()
-app.use("/api",router)
+//app.use("/api",router)
 app.listen(process.env.PORT || 2000)
 var uri = process.env.URI
 mongoose.connect(uri)
