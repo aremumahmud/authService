@@ -1,7 +1,5 @@
 var express = require("express")
 var mongoose =require("mongoose")
-var signIn = require("./signin")
-var signUp = require("./signup")
 var router = require("./router")
 
 var app = express()
@@ -18,4 +16,4 @@ mongoose.connect(uri)
    res.send("hello")
  })  
 
-//http://localhost:2000/api/signUp/?username=brad&password=userd
+
