@@ -17,7 +17,10 @@ module.exports=function (req ,res){
             error : true,
             msg : "error finding record"
           }))
-        }else if(bcrypt.compareSync(password, login.password)){
+        }else if(login == null){
+
+          res.send("new")
+}else if(bcrypt.compareSync(password, login.password)){
           res
             .status(200)
             .send(JSON.stringify({
