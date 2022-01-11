@@ -1,6 +1,6 @@
 var AuthModel = require("./Auth.Model")
 var bcrypt = require('bcryptjs');
-
+var axios = require("axios")
 function signIn(req , res){
   var { username , password } = req.query
 
