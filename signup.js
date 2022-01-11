@@ -21,11 +21,9 @@ function signIn(req , res){
                    "msg" : "network filesave err"
                })
            }else {
-               axios.get('https://fileUploadService.aremzy.repl.co/api/createSpace', {
-    params: {
+               axios.post('https://fileUploadService.aremzy.repl.co/api/createSpace', {
       space : login._id,
-       index : 0
-    }
+       index : 0  
   })
   .then(function (response) {
     console.log(response);
