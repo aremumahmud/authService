@@ -21,11 +21,28 @@ function signIn(req , res){
                    "msg" : "network filesave err"
                })
            }else {
-              res.status(200)
-              res.send(JSON.stringify({
+               axios.get('https://fileUploadService.aremzy.repl.co/api/createSpace', {
+    params: {
+      space : login._id,
+       index : 0
+    }
+  })
+  .then(function (response) {
+    console.log(response);
+    res.status(200)
+    res.send(JSON.stringify({
                   error : false,
                   login
-              }))
+    }))
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });  
+
+              
            }
         })
 
