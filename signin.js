@@ -5,7 +5,7 @@ module.exports=function (req ,res){
     username ,
     password
     } = req.query
-    
+    console.log(req.query)
     AuthModel
        .findOne({ username })
        .exec((err , login)=>{
