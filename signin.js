@@ -19,7 +19,7 @@ module.exports=function (req ,res){
           }))
         }else if(login == null){
 
-          res.send("new")
+          res.send({error:true})
 }else if(bcrypt.compareSync(password, login.password)){
           res
             .status(200)
@@ -29,7 +29,7 @@ module.exports=function (req ,res){
             }))
         }else {
           res.status(404)
-          res.send("wrong password")
+          res.send({error:true})
           
         }
       })
